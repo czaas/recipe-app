@@ -1,0 +1,1 @@
+app.controller("recipeFeedCtrl",["$scope",function(o){o.name="Info coming from controller!"}]);

@@ -1,0 +1,1 @@
+app.config(["$routeProvider",function(e){e.when("/",{templateUrl:"/views/index.html",controller:"recipeFeedCtrl"})}]);
