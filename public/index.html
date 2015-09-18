@@ -10,13 +10,15 @@
 		
 		<header>
 			<nav>
-				<a href="/">Home</a>
-				<a href="/add-recipe">Add Recipe</a>
-				<a href="/register"></a>
+				<a href="/#/">Home</a>
+				<a href="/#/add-recipe">Add Recipe</a>
+				<a href="/#/register"></a>
 			</nav>
 		</header>
-
-		<div ng-view></div>
+		
+		<div class="view-container">
+			<div ng-view></div>
+		</div>
 	</div>
 
 	<script src="/_lib/angular.min.js"></script>
