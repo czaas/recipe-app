@@ -3,3 +3,36 @@ app.controller('recipeFeedCtrl', ['$scope', function($scope){
 	$scope.name = 'Info coming from controller!';
 	
 }]);
+
+app.controller('addRecipeCtrl', ['$scope', function($scope){
+	$scope.steps = [];
+	$scope.ingredients = [];
+
+	$scope.addStep = function(){
+		if($scope.newStep){
+			$scope.steps.push($scope.newStep);
+			$scope.newStep = '';
+		}
+	};
+
+	$scope.addIngredient = function(){
+		if($scope.newIngredient && $scope.newIngredientQty){
+			var newIngredientObj = {
+				name: $scope.newIngredient,
+				qty: $scope.newIngredientQty
+			};
+
+			$scope.ingredients.push(newIngredientObj);
+			$scope.newIngredient = '';
+			$scope.newIngredientQty = '';
+		}
+	};
+
+	$scope.saveRecipe = function(){
+		var recipe = {
+			recipeName: $scope.recipeName,
+			recipeSteps: $scope.steps,
+			recipeIngredients: $scope.ingredients
+		};
+	};
+}]);

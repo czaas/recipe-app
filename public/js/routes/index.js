@@ -5,6 +5,7 @@ app.config(['$routeProvider', function($routeProvider){
 			controller: 'recipeFeedCtrl'
 		})
 		.when('/add-recipe', {
-			templateUrl: '/views/add-recipe.html'
+			templateUrl: '/views/add-recipe.html',
+			controller: 'addRecipeCtrl'
 		});
 }]);
