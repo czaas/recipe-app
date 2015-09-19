@@ -4,7 +4,7 @@ app.controller('recipeFeedCtrl', ['$scope', function($scope){
 	
 }]);
 
-app.controller('addRecipeCtrl', ['$scope', function($scope){
+app.controller('addRecipeCtrl', ['$scope', '$http', function($scope, $http){
 	$scope.steps = [];
 	$scope.ingredients = [];
 
@@ -34,5 +34,11 @@ app.controller('addRecipeCtrl', ['$scope', function($scope){
 			recipeSteps: $scope.steps,
 			recipeIngredients: $scope.ingredients
 		};
+
+		$http.post('http://localhost:3000/add-recipe', recipe)
+		.success(function(data){
+			console.log(data);
+		});
+
 	};
 }]);
