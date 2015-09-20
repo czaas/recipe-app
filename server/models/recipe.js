@@ -5,6 +5,6 @@ var recipeSchema = new Schema({
 	recipeName: String,
 	recipeSteps: Array,
 	recipeIngredients: Array
-});
+}, { collection: 'recipes' });
 
 module.exports = mongoose.model('Recipe', recipeSchema);
