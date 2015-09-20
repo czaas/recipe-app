@@ -40,7 +40,8 @@ gulp.task('watch', function(){
 			middleware: function(req, res, next){
 				res.setHeader('Access-Control-Allow-Origin', '*');
 				next();
-			}
+			},
+			port: 3001
 		}
 	});
 

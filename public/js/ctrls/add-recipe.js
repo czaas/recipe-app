@@ -1,4 +1,5 @@
 app.controller('addRecipeCtrl', ['$scope', '$http', function($scope, $http){
+	
 	$scope.steps = [];
 	$scope.ingredients = [];
 
@@ -31,7 +32,7 @@ app.controller('addRecipeCtrl', ['$scope', '$http', function($scope, $http){
 
 		$http.post('http://localhost:3000/add-recipe', recipe)
 		.success(function(data){
-			console.log(data);
+			//console.log(data);
 		});
 
 	};

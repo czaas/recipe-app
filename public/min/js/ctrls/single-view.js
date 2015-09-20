@@ -1,0 +1,1 @@
+app.controller("singleViewCtrl",["$scope","$http","$location",function(e,c,t){var i=t.$$search.recipe;e.recipe={},c.get("http://localhost:3000/single-recipe?"+i).success(function(c){e.recipe=c[0]})}]);

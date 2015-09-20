@@ -1,1 +1,1 @@
-app.controller("recipeFeedCtrl",["$scope","$http",function(e,o){e.recipes=[],e.name="Info coming from controller!",o.get("http://localhost:3000/get-recipes").then(function(o){e.recipes=o.data,console.log(o.data)})}]);
+app.controller("recipeFeedCtrl",["$scope","$http",function(e,t){e.recipes=[],e.name="Info coming from controller!",t.get("http://localhost:3000/get-recipes").then(function(t){e.recipes=t.data})}]);

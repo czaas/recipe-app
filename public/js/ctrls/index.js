@@ -6,7 +6,6 @@ app.controller('recipeFeedCtrl', ['$scope', '$http', function($scope, $http){
 	$http.get('http://localhost:3000/get-recipes')
 	.then(function(res){
 		$scope.recipes = res.data;
-		console.log(res.data);
 	});
 
 }]);

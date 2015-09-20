@@ -1,1 +1,1 @@
-app.config(["$routeProvider",function(e){e.when("/",{templateUrl:"/views/index.html",controller:"recipeFeedCtrl"}).when("/add-recipe",{templateUrl:"/views/add-recipe.html",controller:"addRecipeCtrl"})}]);
+app.config(["$routeProvider",function(e){e.when("/",{templateUrl:"/views/index.html",controller:"recipeFeedCtrl"}).when("/add-recipe",{templateUrl:"/views/add-recipe.html",controller:"addRecipeCtrl"}).when("/view-recipe",{templateUrl:"/views/view-recipe.html",controller:"singleViewCtrl"})}]);

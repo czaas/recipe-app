@@ -10,12 +10,24 @@ exports.addRecipe = function(req, res){
 
 };
 
-exports.getRecipes = function(req, res){
+exports.allRecipes = function(req, res){
 
 	Recipe.find(function(err, recipes){
 		if(err) { console.error(err); }
 
 		res.send(recipes);
+	});
+
+};
+
+exports.getRecipe = function(req, res){
+
+	var recipeId = req.url.substr(15);
+
+	Recipe.find({ _id: recipeId }, function(err, recipe){
+		if(err) { console.error(err); }
+
+		res.send(recipe);
 	});
 
 };

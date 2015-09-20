@@ -17,7 +17,9 @@ db.on('error', console.error.bind(console, 'connection error:'));
 var api = require('./controllers/api.js');
 
 app.post('/add-recipe', api.addRecipe);
-app.get('/get-recipes', api.getRecipes);
+app.get('/get-recipes', api.allRecipes);
+app.get('/single-recipe', api.getRecipe);
+
 app.get('/', function(req, res){
 	res.send('Hello');
 });
