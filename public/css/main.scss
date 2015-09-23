@@ -4,8 +4,6 @@ h1 { margin: 2px 0 10px 0; }
 
 .container { max-width: 720px; width: 100%; margin: 0 auto; padding: 0; }
 
-
-
 header { padding: 10px 15px; border-bottom: 1px solid #333 }
 
 nav { 
@@ -16,3 +14,12 @@ nav {
 }
 
 .view-container { padding: 15px; }
+
+.allRecipes {
+	.recipe {  
+		a { text-decoration: none; color: #2c3e50; 
+			&:hover { color: #34495e; }
+			&:after { content: '\f105'; font-family: 'fontawesome'; margin-left: 7px; }
+		}
+	}
+}

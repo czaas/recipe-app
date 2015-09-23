@@ -23,7 +23,7 @@
 		<button ng-click="saveRecipe()">Submit Recipe</button>
 	</div>
 	<div id="newRecipe" class="pure-u-1-2">
-		<h2>Recipe Name: {{ recipeName }}</h2> 
+		<h2>{{ recipeName || "Recipe Name:" }}</h2> 
 		<h2>Steps: </h2>
 		<ol>
 			<li ng-repeat="step in steps track by $index">{{ step }}</li>

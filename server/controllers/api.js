@@ -6,6 +6,10 @@ exports.addRecipe = function(req, res){
 	
 	var recipe = new Recipe(req.body).save(function(err, docs){
 		if(err) { console.error(err); }
+
+		console.log('New recipe added!');
+
+		res.send('recipe added');
 	});
 
 };
