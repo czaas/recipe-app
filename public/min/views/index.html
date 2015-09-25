@@ -1,7 +1,7 @@
 <h1>All Recipes</h1>
 <div class="allRecipes">
 	<div ng-repeat="recipe in recipes" class="recipe">
-		<h2><a href="/#/view-recipe?recipe={{ recipe._id }}">{{ recipe.recipeName }}</a></h2>
+		<h2><a href="/#/view-recipe?recipe={{ recipe._id }}">{{ recipe.recipeName }}</a> <i class="fa fa-trash-o" ng-click="removeRecipe()" ></i></h2>
 		<hr />
 	</div>
 </div>

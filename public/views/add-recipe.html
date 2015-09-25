@@ -1,3 +1,7 @@
+<style>
+	input { margin: 0 0 10px; }
+</style>
+
 <div class="pure-g">
 	<div class="pure-u-1-2">
 		<label for="recipe-name">Recipe Name:
@@ -5,17 +9,17 @@
 		</label><br />
 
 		<form>
-			<label for="steps">Steps:
+			<label for="steps">Steps:<br />
 				<input type="text" id="steps" ng-model="newStep">
 			</label><br />
 			<button ng-click="addStep()">Add Step</button>
 		</form>
 
 		<form>
-			<label for="ingredients">Ingredients:
+			<label for="ingredients">Ingredients:<br />
 				<input type="text" id="ingredients" ng-model="newIngredient">
 			</label><br />
-			<label for="ingredientQty">Quantity:
+			<label for="ingredientQty">Quantity:<br />
 				<input type="text" id="ingredients" ng-model="newIngredientQty">
 			</label><br />
 			<button ng-click="addIngredient()">Add Ingredient</button>

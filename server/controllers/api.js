@@ -14,6 +14,20 @@ exports.addRecipe = function(req, res){
 
 };
 
+exports.removeRecipe = function(req, res){
+
+	Recipe.remove({ 
+		
+		_id: req.query.recipeId 
+
+	}, function(err){
+		
+		if(err) { console.error(err); res.send('ERROR'); }
+		else { res.send('Data has been removed.'); }
+
+	});
+};
+
 exports.allRecipes = function(req, res){
 
 	Recipe.find(function(err, recipes){

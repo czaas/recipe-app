@@ -19,6 +19,7 @@ var api = require('./controllers/api.js');
 app.post('/add-recipe', api.addRecipe);
 app.get('/get-recipes', api.allRecipes);
 app.get('/single-recipe', api.getRecipe);
+app.delete('/remove-recipe', api.removeRecipe);
 
 app.get('/', function(req, res){
 	res.send('Hello');

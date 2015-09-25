@@ -15,11 +15,21 @@ nav {
 
 .view-container { padding: 15px; }
 
+.fa-pencil { font-size: 20px; display: inline-block; float: right;
+	&:hover { cursor: pointer; }
+}
+
+.fa-trash-o { color: #666; float: right; transition: all .2s ease-out; display: inline-block;
+	&:hover { color: #ff0000; cursor: pointer; }
+}
+
 .allRecipes {
 	.recipe {  
 		a { text-decoration: none; color: #2c3e50; 
 			&:hover { color: #34495e; }
 			&:after { content: '\f105'; font-family: 'fontawesome'; margin-left: 7px; }
 		}
+
+		h2 { padding: 0 20px; }
 	}
 }
