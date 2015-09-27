@@ -24,8 +24,6 @@ app.controller('recipeFeedCtrl', ['$scope', '$http', function($scope, $http){
 				$scope.recipes = res.data;
 			}
 		);
-
-		console.log('data has been updated.');
 	}
 
 	updateData();

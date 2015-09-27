@@ -4,12 +4,10 @@ var Recipe = require('../models/recipe.js');
 
 exports.addRecipe = function(req, res){
 	
-	var recipe = new Recipe(req.body).save(function(err, docs){
+	var recipe = new Recipe(req.body).save(function(err, newRecipe){
 		if(err) { console.error(err); }
 
-		console.log('New recipe added!');
-
-		res.send('recipe added');
+		res.send(newRecipe._id);
 	});
 
 };
@@ -18,7 +16,7 @@ exports.removeRecipe = function(req, res){
 
 	Recipe.remove({ 
 		
-		_id: req.query.recipeId 
+		_id: req.query.recipeId
 
 	}, function(err){
 		
