@@ -3,6 +3,17 @@ app.controller('addRecipeCtrl', ['$scope', '$http', '$location', function($scope
 	$scope.steps = [];
 	$scope.ingredients = [];
 
+	$scope.editStep = function(){
+		$scope.newStep = this.step;
+		$scope.steps.splice(this.$index, 1);
+	};
+
+	$scope.editIngredient = function(){
+		$scope.newIngredient = this.ingredient.name;
+		$scope.newIngredientQty = this.ingredient.qty;
+		$scope.ingredients.splice(this.$index, 1);
+	};
+
 	$scope.addStep = function(){
 		if($scope.newStep){
 			$scope.steps.push($scope.newStep);

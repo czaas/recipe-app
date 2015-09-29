@@ -1,8 +1,10 @@
 <style>
 	input { margin: 0 0 10px; }
+	li:hover { cursor: move; }
 </style>
 
 <div class="pure-g">
+
 	<div class="pure-u-1-2">
 		<label for="recipe-name">Recipe Name:
 			<input type="text" id="recipe-name" ng-name="recipe-name" ng-model="recipeName">
@@ -24,18 +26,25 @@
 			</label><br />
 			<button ng-click="addIngredient()">Add Ingredient</button>
 		</form>
+
 		<button ng-click="saveRecipe()">Submit Recipe</button>
 	</div>
+
 	<div id="newRecipe" class="pure-u-1-2">
+
 		<h2>{{ recipeName || "Recipe Name:" }}</h2> 
 		<h2>Steps: </h2>
-		<ol>
-			<li ng-repeat="step in steps track by $index">{{ step }}</li>
+		<ol dragula="steps-bag" dragula-model="steps">
+			<li ng-repeat="step in steps track by $index">{{ step }} <i class="fa fa-pencil" ng-click="editStep()"></i></li>
 		</ol>
 
 		<h2>Ingredients:</h2>
-		<ul>
-			<li ng-repeat="ingredient in ingredients track by $index">{{ ingredient.name }}, {{ ingredient.qty }}</li>
+		<ul dragula="ingredients-bag" dragula-model="ingredients">
+			<li ng-repeat="ingredient in ingredients track by $index">
+			{{ ingredient.name }}, {{ ingredient.qty }} <i class="fa fa-pencil" ng-click="editIngredient()"></i>
+
+			</li>
 		</ul>
+
 	</div>
 </div>
