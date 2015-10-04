@@ -1,8 +1,8 @@
 # My Recipe app.
 
-I'm very happy with the outcome of this project. I feel like I learned a lot. I learned a lot while builing this app. There are things I liked that I did, and things that I will do differently in my next app. 
+I'm very happy with the outcome of this project. I learned a lot while builing this app, there are things I liked that I did, and some things that I will do differently in my next app. 
 
-Throughout the build of this project I was reading a lot about how to structure an angular app, like different methods of organizing and making use of reusable componements. 
+Throughout the build of this project I was reading a lot about how to structure an angular app, like different methods of organizing and making use of reusable componements. I could have used a directive for the add-recipe view and edit recipe mode inside the view-recipe view.
 
 If you have any questions, just ask!
 
