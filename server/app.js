@@ -16,10 +16,10 @@ db.on('error', console.error.bind(console, 'connection error:'));
 
 var api = require('./controllers/api.js');
 
-app.put('/update-recipe', api.updateRecipe);
-app.post('/add-recipe', api.addRecipe);
 app.get('/get-recipes', api.allRecipes);
+app.post('/add-recipe', api.addRecipe);
 app.get('/single-recipe', api.getRecipe);
+app.put('/update-recipe', api.updateRecipe);
 app.delete('/remove-recipe', api.removeRecipe);
 
 app.get('/', function(req, res){
