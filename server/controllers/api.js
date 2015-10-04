@@ -2,6 +2,18 @@
 
 var Recipe = require('../models/recipe.js');
 
+exports.updateRecipe = function(req, res){
+	
+	var id = req.body._id;
+
+	Recipe.update({ _id: id }, req.body, {}, function(err, rawResponse){
+		if(err) { console.error(err); }
+		if(rawResponse){
+			res.send(rawResponse);
+		}
+	});
+};
+
 exports.addRecipe = function(req, res){
 	
 	var recipe = new Recipe(req.body).save(function(err, newRecipe){

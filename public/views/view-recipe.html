@@ -41,7 +41,7 @@
 					<div class="pure-u-1-2">
 						<h2>Steps</h2>
 						<ol dragula='"steps-bag"' dragula-model="steps">
-							<li ng-repeat="step in recipe.recipeSteps track by $index">{{ step  }} <i class="fa fa-pencil" ng-click="editStep()"></i></li>
+							<li ng-repeat="step in recipe.recipeSteps track by $index">{{ step }} <i class="fa fa-pencil" ng-click="editStep()"></i></li>
 						</ol>
 					</div>
 
@@ -61,30 +61,27 @@
 	<div class="pure-g" ng-show="editMode">
 		<div class="pure-u-1"><hr></div>
 		<div class="pure-u-1-2">
-			<label for="recipe-name">Recipe Name:
-				<input type="text" id="recipe-name" ng-name="recipe-name" ng-model="recipeName">
-			</label>
 
 			<form>
 				<label for="steps">Steps:
-					<input type="text" id="steps" ng-model="newStep">
+					<input type="text" id="steps" ng-model="editStepInput">
 				</label>
-				<button ng-click="addStep()">Add</button>
+				<button ng-click="updateStep()">Update</button>
 			</form>
 		</div>
 		
 		<div class="pure-u-1-2">
 			<form>
 				<label for="ingredients">Ingredients:
-					<input type="text" id="ingredients" ng-model="newIngredient">
+					<input type="text" id="ingredients" ng-model="editIngredientInput">
 				</label><br />
 				<label for="ingredientQty">Quantity:
-					<input type="text" id="ingredients" ng-model="newIngredientQty">
+					<input type="text" id="ingredients" ng-model="editIngredientQtyInput">
 				</label>
-				<button ng-click="addIngredient()">Add</button>
+				<button ng-click="updateIngredient()">Update</button>
 			</form>	
 		</div>
-		<div class="pure-u-1"><button ng-click="saveRecipe()">Submit Recipe</button></div>
+		<div class="pure-u-1"><button ng-click="saveUpdatedRecipe()">Save Updated Recipe</button></div>
 	</div>
 
 </div>
