@@ -1,0 +1,1 @@
+app.controller("TimerCtrl",function(l){l.timer="Hello"});

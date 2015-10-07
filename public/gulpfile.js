@@ -7,7 +7,7 @@ var gulp = require('gulp'),
 
 
 gulp.task('html', function(){
-	var htmlFolders = ['./*.html', './views/*.html'];
+	var htmlFolders = ['./*.html', './views/*.html', './js/**/*.html'];
 
 	gulp.src(htmlFolders, { base: './' })
 	.pipe(gulp.dest('./min'))
@@ -45,7 +45,7 @@ gulp.task('watch', function(){
 		}
 	});
 
-	gulp.watch(['./*.html', './views/*.html'], ['html']);
+	gulp.watch(['./*.html', './views/*.html', './js/**/*.html'], ['html']);
 	gulp.watch(['./js/*.js', './js/**/*.js'], ['js']);
 	gulp.watch(['./css/*.scss'], ['scss']);
 });

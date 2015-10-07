@@ -1,0 +1,1 @@
+angular.module("recipeInputFields",[]).controller("myController",function(){}).directive("recipeInput",function(){return{restrict:"E",scope:!0,transclude:!0,replace:!1,templateUrl:"/js/directives/recipe-fields/recipe-fields.html"}});

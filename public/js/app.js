@@ -1,1 +1,1 @@
-var app = angular.module('recipeApp', ['ngRoute', angularDragula(angular)]);
+var app = angular.module('recipeApp', ['ngRoute', 'recipeInputFields', angularDragula(angular)]);
